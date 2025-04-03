@@ -12,4 +12,10 @@ const categoryCounts = data.reduce((obj, item) => {
   return obj;
 }, {});
 
+// Create array of objects with name and count
+const categoryList = uniqueCategories.map(name => ({
+  name,
+  count: categoryCounts[name]
+}));
+
 export default data;
